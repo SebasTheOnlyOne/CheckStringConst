@@ -23,6 +23,7 @@ namespace Homework3
             Console.WriteLine("Введите строку, которую надо проверить на принадлежность к доменным протолокам https или http: ");
             var stringProtoc = Console.ReadLine();
             Console.WriteLine($"Результат: {stringProtoc} - {ItIsHttp(stringProtoc)}");
+            say("Hfhdhfd");
 
         }
 
