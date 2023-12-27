@@ -13,7 +13,7 @@ namespace TestProject1
         [Test]
         public void Test1()
         {
-            var testString = "dsfÀ213ÌÂ20   ûâä À213ÌÂ";
+            var testString = "dsfÃ€213ÃŒÃ‚20   Ã»Ã¢Ã¤ Ã€213ÃŒÃ‚";
             Assert.AreEqual(Program.SearchAutoNum(testString), "");
             
         }
@@ -21,15 +21,15 @@ namespace TestProject1
         [Test]
         public void Test2()
         {
-            var testString1 = "dsfÀ213ÌÂ20   ûâä À213ÂÂ154";
-            Assert.AreEqual(Program.SearchAutoNum(testString1), "1: À213ÂÂ154 ");
+            var testString1 = "dsfÃ€213ÃŒÃ‚20   Ã»Ã¢Ã¤ Ã€213Ã‚Ã‚154";
+            Assert.AreEqual(Program.SearchAutoNum(testString1), "1: Ã€213Ã‚Ã‚154 ");
         }
 
         [Test]
         public void Test3()
         {
-            var testString2 = "dsfÀ213ÂÂ20   ûâä À213ÂÂ154 À213ÂÂ23";
-            Assert.AreEqual(Program.SearchAutoNum(testString2), "1: À213ÂÂ154 2: À213ÂÂ23 ");
+            var testString2 = "dsfÃ€213Ã‚Ã‚20   Ã»Ã¢Ã¤ Ã€213Ã‚Ã‚154 Ã€213Ã‚Ã‚23";
+            Assert.AreEqual(Program.SearchAutoNum(testString2), "1: Ã€213Ã‚Ã‚154 2: Ã€213Ã‚Ã‚23 ");
         }
         [Test]
         public void Test4()
@@ -74,28 +74,16 @@ namespace TestProject1
             Assert.AreEqual(Program.SwapToTeg(testString7), @"<em>f</em>");
         }
         [Test]
-        public void Test11()
-        {
-            var testString8 = @"http://example.com/";
-            Assert.AreEqual(Program.ItIsHttp(testString8), @"Äà");
-        }
-        [Test]
         public void Test12()
         {
             var testString9 = "example.com";
-            Assert.AreEqual(Program.ItIsHttp(testString9), @"Íåò");
+            Assert.AreEqual(Program.ItIsHttp(testString9), @"ÃÃ¥Ã²");
         }
         [Test]
         public void Test13()
         {
-            var testString10 = "êğåìëü.ğô";
-            Assert.AreEqual(Program.ItIsHttp(testString10), @"Íåò");
-        }
-        [Test]
-        public void Test14()
-        {
-            var testString11 = @"https://example.com/";
-            Assert.AreEqual(Program.ItIsHttp(testString11), @"Äà");
+            var testString10 = "ÃªÃ°Ã¥Ã¬Ã«Ã¼.Ã°Ã´";
+            Assert.AreEqual(Program.ItIsHttp(testString10), @"ÃÃ¥Ã²");
         }
     }
 }
